@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/",
+		// нельзя использовать переменные без указания типа
+		"noImplicitAny": true,
+		// компиляция в es5 для поддержки большинства браузеров
+		"target": "es5",
+		// модульная система для поддержки импортов
+		"module": "ESNext",
+		"allowJs": true,
+		"jsx": "react",
+		"moduleResolution": "node",
+		// commonjs is the default module system for node 
+		// import path from 'path' is commonjs (instead of require('path'))
+		"esModuleInterop": true,
+		// allow import React from 'react' instead of import * as React from 'react' 
+		"allowSyntheticDefaultImports": true,
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
+	}
+}
