@@ -1,6 +1,8 @@
 import webpack from "webpack";
 
 export function buildLoaders(): webpack.RuleSetRule[] {
+
+	// порядок важен, сначала ts-loader, потом babel-loader
 	return [
 		{
 			// регулярное выражение для расширения файлов
