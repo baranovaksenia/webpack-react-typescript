@@ -1,10 +1,14 @@
 import { FC, useMemo, useState } from 'react'
-import { Theme, ThemeContext } from './ThemeContext'
+import {
+	LOCAL_STORAGE_THEME_KEY,
+	Theme,
+	ThemeContext,
+} from '../lib/ThemeContext'
 
 // Retrieve the theme from localStorage and cast it to the Theme type.
 // If no theme is found, the default is set to the light theme.
 const defaultTheme =
-	(localStorage.getItem('LOCAL_STORAGE_THEME_KEY') as Theme) || Theme.LIGHT
+	(localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme) || Theme.LIGHT
 
 // Define a ThemeProvider functional component.
 const ThemeProvider: FC = ({ children }) => {
