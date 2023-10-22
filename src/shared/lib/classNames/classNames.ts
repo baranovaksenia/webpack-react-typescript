@@ -12,13 +12,13 @@ type Mods = Record<string, boolean | string>
  */
 export function classNames(
 	cls: string,
-	mods: Mods,
-	additional: string[]
+	mods?: Mods,
+	additional?: string[]
 ): string {
 	// Create an array that includes the base class, additional classes, and filtered modifiers.
 	return [
 		cls, // Include the base class.
-		...additional, // Include additional classes.
+		...additional.filter(Boolean), // Include additional classes.
 		// Filter and include class names from modifiers if their values are truthy.
 		Object.entries(mods)
 			.filter(([className, value]) => Boolean(value))
