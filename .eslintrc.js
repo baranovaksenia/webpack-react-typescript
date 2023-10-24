@@ -3,7 +3,10 @@ module.exports = {
         browser: true, // Specifies the environment as a browser
         es2021: true, // Specifies ES2021 as the target environment
     },
-    extends: ['plugin:react/recommended', 'airbnb'], // Extends recommended configurations for React and Airbnb style guide
+    extends: [
+        'plugin:react/recommended',
+        'airbnb',
+        'plugin:i18next/recommended'],
     parser: '@typescript-eslint/parser', // Specifies the parser for TypeScript
     parserOptions: {
         ecmaFeatures: {
@@ -12,7 +15,7 @@ module.exports = {
         ecmaVersion: 'latest', // Specifies the latest ECMAScript version
         sourceType: 'module', // Indicates use of ECMAScript modules
     },
-    plugins: ['react', '@typescript-eslint'], // Plugins for React and TypeScript
+    plugins: ['react', '@typescript-eslint', 'i18next'], // Plugins for React and TypeScript
     rules: {
         'react/jsx-indent': [2, 4], // Enforces 4-space indentation for JSX
         'react/jsx-indent-props': [2, 4], // Enforces 4-space indentation for JSX props
@@ -33,6 +36,8 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off', // Disables extraneous dependency checks
         'no-underscore-dangle': 'off', // Disables warnings for underscores in identifiers
         'linebreak-style': 'off', // Disables linebreak style checks
+        'i18next/no-literal-string': ['error',
+            { markupOnly: true }],
     },
     globals: {
         __IS_DEV__: true, // Specifies __IS_DEV__ as a global variable that is always true
