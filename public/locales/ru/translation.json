@@ -2,5 +2,7 @@
   "my translation": "мой перевод",
   "translate": "перевести",
   "lang": "RU",
-  "Page not Found": "страница не найдена"
+  "Page not Found": "страница не найдена",
+  "an unexpected error occurred": "что-то пошло не так...",
+  "refresh the page": "обновить страницу"
 }
