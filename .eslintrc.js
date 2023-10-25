@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true, // Specifies the environment as a browser
         es2021: true, // Specifies ES2021 as the target environment
+        jest: true, // Specifies Jest as the target environment
     },
     extends: [
         'plugin:react/recommended',
@@ -38,6 +39,7 @@ module.exports = {
         'linebreak-style': 'off', // Disables linebreak style checks
         'i18next/no-literal-string': ['error',
             { markupOnly: true }],
+        'max-len': ['error', { code: 130 }],
     },
     globals: {
         __IS_DEV__: true, // Specifies __IS_DEV__ as a global variable that is always true
