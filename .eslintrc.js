@@ -4,10 +4,7 @@ module.exports = {
         es2021: true, // Specifies ES2021 as the target environment
         jest: true, // Specifies Jest as the target environment
     },
-    extends: [
-        'plugin:react/recommended',
-        'airbnb',
-        'plugin:i18next/recommended'],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
     parser: '@typescript-eslint/parser', // Specifies the parser for TypeScript
     parserOptions: {
         ecmaFeatures: {
