@@ -37,11 +37,26 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off', // Disables extraneous dependency checks
         'no-underscore-dangle': 'off', // Disables warnings for underscores in identifiers
         'linebreak-style': 'off', // Disables linebreak style checks
-        'i18next/no-literal-string': ['error',
-            { markupOnly: true }],
-        'max-len': ['error', { code: 130 }],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to'],
+            },
+        ],
+        'max-len': ['error', { ignoreComments: true, code: 160 }],
     },
     globals: {
         __IS_DEV__: true, // Specifies __IS_DEV__ as a global variable that is always true
     },
+    // для определенный файлов переопределяем правила
+    // for test.ts / test.tsx - отключаем переводы
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+    ],
 };

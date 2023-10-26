@@ -21,13 +21,10 @@ export default {
     testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
     // путь до корневой папки (root)
     rootDir: '../../',
-    // setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
+    setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-        // '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
-        // '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-        // '@/(.*)': '<rootDir>/src/$1',
     },
     // Indicates which provider should be used to instrument code for coverage
     // coverageProvider: "babel",

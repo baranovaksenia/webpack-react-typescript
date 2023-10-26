@@ -1,4 +1,17 @@
 {
-	"presets": ["@babel/preset-env", "@babel/preset-typescript"],
-	"plugins": ["i18next-extract"]
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-typescript",
+// preset for react
+    [
+      "@babel/preset-react",
+      {
+				//react автоматически подставляется без импорта (не указываем каждый раз импорт реакта)
+        "runtime": "automatic"
+      }
+    ]
+  ],
+  "plugins": [
+    "i18next-extract"
+  ]
 }
