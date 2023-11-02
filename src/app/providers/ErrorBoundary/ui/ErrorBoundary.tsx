@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
 import { PageError } from 'widgets/PageError';
 
